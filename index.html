@@ -11,15 +11,52 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container header-container">
     <div class="row">
-      <div class="col-xs-12">
-        <h2>10 Sec Maths Game</h2>
-        <h1 id="equation"></h1>
-        <input id="user-input" type="number" />
+      <h2>10 Sec Maths Game</h2>
+      <div class="row text-center">
+        <p>Choose Max Number</p>
+        <div class="row">
+
+          <input id="max10" type="checkbox" class="option"><span id="max-number">10</span>
+          <input id="max25" type="checkbox" class="option"><span id="max-number">25</span>
+          <input id="max50" type="checkbox" class="option"><span id="max-number">50</span>
+        </div>
       </div>
     </div>
   </div>
+
+
+  <div class="container game-container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+
+        <h3 id="time-left">10</h3>
+        <p id="timer-id">seconds left</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 parent">
+
+            <h1 id="equation"></h1>
+            <input id="user-input" type="number" />
+
+            <h5>Current Score: <span id="score">0</span></h5>
+            <h5>High Score: <span id="high-score">0</span></h5>
+            <button id="reset" class="btn-sm">reset</button>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
 </body>
 
 </html>
