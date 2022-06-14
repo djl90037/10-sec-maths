@@ -56,9 +56,11 @@ $(document).ready(function () {
 
 
   var newQuestionString = function () {
-    question.answer = num1 + num2;
-    question.equation = String(num1) + "+" + String(num2);
-    $('#equation').text(question.equation);
+    if (timeLeft > 0) {
+      question.answer = num1 + num2;
+      question.equation = String(num1) + "+" + String(num2);
+      $('#equation').text(question.equation);
+    }
   }
 
 
