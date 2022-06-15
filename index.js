@@ -20,32 +20,22 @@ $(document).ready(function () {
   var randomNumberGenerator = function (size) {
     return Math.ceil(Math.random() * size);
   }
-  var max10 = function () {
-    num1 = randomNumberGenerator(10);
-    num2 = randomNumberGenerator(10);
-  }
-
-  var max25 = function () {
-    num1 = randomNumberGenerator(25);
-    num2 = randomNumberGenerator(25);
-  }
-
-  var max50 = function () {
-    num1 = randomNumberGenerator(50);
-    num2 = randomNumberGenerator(50);
+  var max = function (input) {
+    num1 = randomNumberGenerator(input);
+    num2 = randomNumberGenerator(input);
   }
 
   // checkbox selected by user
   var gameMode = function () {
     $('input').change(function () {
       if (checkbox10.is(':checked')) {
-        max10();
+        max1(10);
         newQuestionString();
       } else if (checkbox25.is(':checked')) {
-        max25();
+        max(25);
         newQuestionString();
       } else if (checkbox50.is(':checked')) {
-        max50();
+        max(50);
         newQuestionString();
       } else {
         location.reload();
@@ -68,20 +58,20 @@ $(document).ready(function () {
     gameMode();
     console.log(timeLeft);
     if (checkbox10.is(':checked') && $('#time-left') !== 0) {
-      max10();
+      max(10);
       newQuestionString();
       checkbox25.attr('disabled', true); // disabling other gameModes while clock is running
       checkbox50.attr('disabled', true);
     }
     if (checkbox25.is(':checked') && $('#time-left') !== 0) {
-      max25();
+      max(25);
       newQuestionString();
       checkbox10.attr('disabled', true);
       checkbox50.attr('disabled', true);
 
     }
     if (checkbox50.is(':checked') && $('#time-left') !== 0) {
-      max50();
+      max(50);
       newQuestionString();
       checkbox10.attr('disabled', true);
       checkbox25.attr('disabled', true);
