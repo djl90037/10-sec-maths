@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   // checkbox selected by user
   var gameMode = function () {
-    $('input').change(function () {
+    $('.option').change(function () {
       if (checkbox10.is(':checked')) {
         max1(10);
         newQuestionString();
@@ -46,11 +46,9 @@ $(document).ready(function () {
 
 
   var newQuestionString = function () {
-    if (timeLeft > 0) {
-      question.answer = num1 + num2;
-      question.equation = String(num1) + "+" + String(num2);
-      $('#equation').text(question.equation);
-    }
+    question.answer = num1 + num2;
+    question.equation = String(num1) + "+" + String(num2);
+    $('#equation').text(question.equation);
   }
 
 
